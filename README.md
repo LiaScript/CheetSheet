@@ -311,7 +311,7 @@ und können beliebig kombiniert werden
 ``` md
 Wie heißt die hier vorangestellte Sprache?
 
-    [[LiaScript]]
+[[LiaScript]]
 ```
 
 ### Single-Choice `[(X)]`
@@ -319,9 +319,9 @@ Wie heißt die hier vorangestellte Sprache?
 ``` md
 Anzahl und Ordnung der Optionen ist beliebig.
 
-    [( )] Diese Wahl ist falsch.
-    [(X)] <-- __Richtig__
-    [( )] Auch falsh.
+[( )] Diese Wahl ist falsch.
+[(X)] <-- __Richtig__
+[( )] Auch falsh.
 ```
 
 ### Multiple-Choice `[[X]]`
@@ -329,10 +329,10 @@ Anzahl und Ordnung der Optionen ist beliebig.
 ``` md
 Alle markierten Zeilen müssen ausgewählt werden:
 
-    [[ ]] nicht ausgewählt
-    [[X]] <-- __Richtig__
-    [[ ]] auch falsh.
-    [[X]] __auch Richtig__
+[[ ]] nicht ausgewählt
+[[X]] <-- __Richtig__
+[[ ]] auch falsh.
+[[X]] __auch Richtig__
 ```
 
 ### Matrix
@@ -340,9 +340,9 @@ Alle markierten Zeilen müssen ausgewählt werden:
 ``` md
 Kombination von Single- und Multiple-Choice Quizzen:
 
-    [[Head 1] [_Head 2_] [**Head 3**]]
-    [  [X]        [ ]         [X]    ]  Weitere
-    [  ( )        (X)         ( )    ]  Zeilen...
+[[Head 1] [_Head 2_] [**Head 3**]]
+[  [X]        [ ]         [X]    ]  Weitere
+[  ( )        (X)         ( )    ]  Zeilen...
 ```
 
 ### Auswahl `[[...|(richtig)|..]]`
@@ -364,28 +364,28 @@ Elemente werden durch | getrennt und dir richtige Option wird durch Klammern mar
 Hilfen können mit `[[?]]` an alle Quizze angehängt
 werden:
 
-    [[LiaScript]]
-    [[?]] Tipp 1
-    [[?]] Tipp 2
-    [[?]] ...
+[[LiaScript]]
+[[?]] Tipp 1
+[[?]] Tipp 2
+[[?]] ...
 ```
 
 #### Erweiterte Auflösungen `***`
 
 ``` md
-    [[LiaScript]]
-    [[?]] Tipp 1
-    [[?]] ...
-    **************************************************
-    Einer oder mehrere Absätze die durch min. 3 `***`
-    abgetrennt sind und nur dargestellt werden, wenn
-    das Quiz gelöst wurde.
+[[LiaScript]]
+[[?]] Tipp 1
+[[?]] ...
+**************************************************
+Einer oder mehrere Absätze die durch min. 3 `***`
+abgetrennt sind und nur dargestellt werden, wenn
+das Quiz gelöst wurde.
 
-    $$
-       \sum_{i=1}^\infty\frac{1}{n^2}
-            =\frac{\pi^2}{6}
-    $$
-    **************************************************
+$$
+   \sum_{i=1}^\infty\frac{1}{n^2}
+        =\frac{\pi^2}{6}
+$$
+**************************************************
 ```
 
 #### Weitere Prüfung `<script>`
@@ -393,12 +393,12 @@ werden:
 Ein `<script>` kann an jedes Quiz angehängt werden um die Eingabe zu formatieren und zu prüfen. Nur wenn `true` zurück gegeben wird, gilt das Quiz als gelöst.
 
 ``` md
-    [[LiaScript]]
-    <script>
-      // @input wird mit der Nutzereingabe ersetzt.
-      let input_string = "@input";
-      "liascript" == input_string.trim().toLowerCase();
-    </script>
+[[LiaScript]]
+<script>
+  // @input wird mit der Nutzereingabe ersetzt.
+  let input_string = "@input";
+  "liascript" == input_string.trim().toLowerCase();
+</script>
 ```
 
 #### Generische Quizze `[[!]]`
@@ -406,10 +406,10 @@ Ein `<script>` kann an jedes Quiz angehängt werden um die Eingabe zu formatiere
 Die Eingaben müssen/können selber organisiert werden:
 
 ``` md
-    [[!]]
-    <script>
-      Math.random() > 0.1
-    </script>
+[[!]]
+<script>
+  Math.random() > 0.1
+</script>
 ```
 
 ## Styling `<!-- ... -->`
